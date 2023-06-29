@@ -1,8 +1,7 @@
-import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:hotels_booking/app/data/local_data_source/sqlite_database.dart';
 import 'package:hotels_booking/app/routes/app_pages.dart';
@@ -10,11 +9,9 @@ import 'package:hotels_booking/core/resourses/color_manager.dart';
 import 'package:hotels_booking/core/resourses/font_manager.dart';
 import 'package:hotels_booking/core/resourses/font_styles_manager.dart';
 import 'package:hotels_booking/core/resourses/size_manager.dart';
-
 import 'package:sensors_plus/sensors_plus.dart';
-import '../controllers/home_controller.dart';
 
-import 'dart:ui';
+import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
@@ -154,11 +151,11 @@ class HomeView extends GetView<HomeController> {
   }
 }
 
-class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
+class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   final Size preferredSize;
 
-  AppBarWidget({Key? key})
+  const AppBarWidget({Key? key})
       : preferredSize = const Size.fromHeight(64.0),
         super(key: key);
 
